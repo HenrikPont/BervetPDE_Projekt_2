@@ -5,7 +5,7 @@
 m = 15;
 
 % Reynolds number
-Re = 80;
+Re = 20:30:200;
 
 % End time
 Tend = 6;
@@ -22,7 +22,6 @@ animate = false;
 
 %% Loop
 
-Re = 20:30:200;
 x_ra = zeros(size(Re_list));
 for i = 1:length(Re)
     x_ra(i) = incomp(m,Re(i),Tend,Lout,animate);
