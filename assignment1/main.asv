@@ -20,15 +20,14 @@ animate = false;
 %x_ra = incomp(m,Re,Tend,Lout,animate)
 
 
-%% Loop
+%% Loop & Plot
 
 Re = 20:30:200;
 x_ra = zeros(size(Re_list));
 for i = 1:length(Re)
     x_ra(i) = incomp(m,Re(i),Tend,Lout,animate);
 end
-%% Plot
+
 plot(Re, x_ra, '-s');
-xlabel('Reynolds number'); ylabel('Reattachment length'); grid on;
 
 
