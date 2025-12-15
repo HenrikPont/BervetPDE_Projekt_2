@@ -37,3 +37,7 @@ tic;
 gs(A, b, zeros(size(b)), 1e-6, 100000);
 t = toc;
 fprintf('Time taken for Gauss Seidel: %.6f seconds\n', t);
+
+%A\b verkar vara snabbast, ganska nära pcg.
+%Gauss Seidel är bajs
+%Cholesky inte jättesnabb för att lösa en gång, men dunder på många
