@@ -5,16 +5,18 @@
 m = 15;
 
 % Reynolds number
-Re = 20:30:200;
+%Re = 20:30:200;
+Re = 200;
+%Re = 20:30:50;
 
 % End time
-Tend = 6;
+Tend = 25;
 
 % Length of outflow pipe
-Lout = 2;
+Lout = 3.5;
 
 % Show animation and streamlines of the solution? True or false. 
-animate = false;
+animate = true;
 
 % ----- Main function -----
 %x_ra = incomp(m,Re,Tend,Lout,animate)
@@ -22,7 +24,7 @@ animate = false;
 
 %% Loop
 
-x_ra = zeros(size(Re_list));
+x_ra = zeros(size(Re));
 for i = 1:length(Re)
     x_ra(i) = incomp(m,Re(i),Tend,Lout,animate);
 end
